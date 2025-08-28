@@ -3,9 +3,315 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Decentralized Digital Ballot Platform | Meta-4</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+            color: #fff;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 20px;
+        }
+        
+        .container {
+            max-width: 1200px;
+            width: 100%;
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(10px);
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.4);
+            margin: 20px 0;
+        }
+        
+        header {
+            background: linear-gradient(to right, #1a2980, #26d0ce);
+            padding: 20px;
+            text-align: center;
+            position: relative;
+        }
+        
+        .logo-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 15px 0;
+        }
+        
+        .logo {
+            width: 120px;
+            height: 120px;
+            background: linear-gradient(45deg, #1a2980, #26d0ce);
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            box-shadow: 0 0 25px rgba(38, 208, 206, 0.6);
+            margin: 0 auto;
+        }
+        
+        .logo i {
+            font-size: 60px;
+            color: white;
+        }
+        
+        h1 {
+            font-size: 2.8rem;
+            margin: 10px 0;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+        }
+        
+        h2 {
+            font-size: 1.8rem;
+            color: #26d0ce;
+            margin: 25px 0 15px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #26d0ce;
+        }
+        
+        .subtitle {
+            font-size: 1.4rem;
+            color: #bdc3c7;
+            margin-bottom: 20px;
+        }
+        
+        .content {
+            padding: 30px;
+        }
+        
+        .features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            margin: 20px 0;
+        }
+        
+        .feature {
+            background: rgba(255, 255, 255, 0.08);
+            padding: 20px;
+            border-radius: 12px;
+            transition: transform 0.3s ease;
+        }
+        
+        .feature:hover {
+            transform: translateY(-5px);
+            background: rgba(255, 255, 255, 0.12);
+        }
+        
+        .feature i {
+            font-size: 2.5rem;
+            color: #26d0ce;
+            margin-bottom: 15px;
+        }
+        
+        .feature h3 {
+            font-size: 1.4rem;
+            margin-bottom: 10px;
+            color: #26d0ce;
+        }
+        
+        .architecture {
+            background: rgba(0, 0, 0, 0.2);
+            padding: 25px;
+            border-radius: 15px;
+            margin: 25px 0;
+        }
+        
+        .layer {
+            margin: 15px 0;
+            padding: 15px;
+            background: linear-gradient(to right, rgba(38, 208, 206, 0.15), transparent);
+            border-radius: 8px;
+        }
+        
+        .layer-title {
+            font-weight: bold;
+            color: #26d0ce;
+            font-size: 1.2rem;
+        }
+        
+        .azure-section {
+            background: linear-gradient(to right, #0078d4, #00b7c3);
+            padding: 25px;
+            border-radius: 15px;
+            margin: 25px 0;
+        }
+        
+        .azure-section h2 {
+            color: white;
+            border-bottom: 2px solid rgba(255, 255, 255, 0.3);
+        }
+        
+        .footer {
+            text-align: center;
+            padding: 20px;
+            background: rgba(0, 0, 0, 0.3);
+            margin-top: 30px;
+            border-radius: 0 0 20px 20px;
+        }
+        
+        .highlight {
+            color: #26d0ce;
+            font-weight: bold;
+        }
+        
+        ul {
+            list-style-type: none;
+            padding: 10px 0;
+        }
+        
+        li {
+            margin: 12px 0;
+            padding-left: 25px;
+            position: relative;
+        }
+        
+        li:before {
+            content: "•";
+            color: #26d0ce;
+            font-weight: bold;
+            position: absolute;
+            left: 0;
+        }
+        
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2.2rem;
+            }
+            
+            .features {
+                grid-template-columns: 1fr;
+            }
+            
+            .content {
+                padding: 20px;
+            }
+        }
+    </style>
 </head>
 <body>
-   <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab optio quo corrupti facere libero quasi itaque molestiae provident cum tempore repellendus molestias nemo distinctio nobis, asperiores quibusdam, eligendi omnis adipisci.</p> 
+    <div class="container">
+        <header>
+            <h1>Decentralized Digital Ballot Platform</h1>
+            <div class="logo-container">
+                <div class="logo">
+                    <i class="fas fa-vote-yea"></i>
+                </div>
+            </div>
+            <div class="subtitle">Secure, Transparent, and Accessible Voting Solution</div>
+        </header>
+        
+        <div class="content">
+            <h2>Our Vision</h2>
+            <p>Meta-4 aims to revolutionize the voting process by leveraging blockchain technology to create a secure, transparent, and accessible digital ballot platform that increases trust in democratic systems.</p>
+            
+            <h2>Key Features</h2>
+            <div class="features">
+                <div class="feature">
+                    <i class="fas fa-mobile-alt"></i>
+                    <h3>Accessible Platform</h3>
+                    <p>Citizens can use a website or mobile app to submit their choices securely from anywhere.</p>
+                </div>
+                
+                <div class="feature">
+                    <i class="fas fa-link"></i>
+                    <h3>Blockchain Integration</h3>
+                    <p>Each choice is recorded on a decentralized blockchain ledger, making it permanent and tamper-proof.</p>
+                </div>
+                
+                <div class="feature">
+                    <i class="fas fa-eye"></i>
+                    <h3>Transparency</h3>
+                    <p>All records are verifiable, ensuring complete fairness and reducing manipulation risks.</p>
+                </div>
+                
+                <div class="feature">
+                    <i class="fas fa-shield-alt"></i>
+                    <h3>Security</h3>
+                    <p>Eliminates duplication and tampering by design, increasing trust in the system.</p>
+                </div>
+                
+                <div class="feature">
+                    <i class="fas fa-bolt"></i>
+                    <h3>Real-Time Verification</h3>
+                    <p>Results and participation data can be validated instantly without delays.</p>
+                </div>
+            </div>
+            
+            <h2>Technical Architecture</h2>
+            <div class="architecture">
+                <div class="layer">
+                    <span class="layer-title">User Layer (Frontend):</span>
+                    <ul>
+                        <li>Website (React.js)</li>
+                        <li>Mobile App (Flutter)</li>
+                    </ul>
+                </div>
+                
+                <div class="layer">
+                    <span class="layer-title">Application Layer (Backend):</span>
+                    <ul>
+                        <li>Node.js / Express.js APIs</li>
+                        <li>Handles requests, validation, and connects with blockchain</li>
+                    </ul>
+                </div>
+                
+                <div class="layer">
+                    <span class="layer-title">Blockchain Layer:</span>
+                    <ul>
+                        <li>Azure Blockchain Service / Quorum to run blockchain nodes</li>
+                        <li>Smart Contracts ensure immutable, tamper-proof recording</li>
+                    </ul>
+                </div>
+                
+                <div class="layer">
+                    <span class="layer-title">Database & Storage:</span>
+                    <ul>
+                        <li>MongoDB / PostgreSQL for metadata</li>
+                        <li>IPFS for decentralized file storage</li>
+                    </ul>
+                </div>
+                
+                <div class="layer">
+                    <span class="layer-title">Security & Identity:</span>
+                    <ul>
+                        <li>JWT / OAuth 2.0 authentication</li>
+                        <li>End-to-end encryption for data security</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <h2>Microsoft Azure Integration</h2>
+            <div class="azure-section">
+                <h3>Deployment & Hosting</h3>
+                <ul>
+                    <li>The backend is deployed on <span class="highlight">Azure App Service</span> for reliable performance</li>
+                    <li>Containers managed with <span class="highlight">Azure Kubernetes Service (AKS)</span> ensure scalability when user load increases</li>
+                </ul>
+                
+                <h3>Blockchain Support</h3>
+                <ul>
+                    <li><span class="highlight">Azure Blockchain Service / Quorum</span> is used to run and manage blockchain nodes</li>
+                    <li>Provides a secure, decentralized, and tamper-proof ledger to record citizen choices</li>
+                    <li>Reduces the complexity of setting up and maintaining blockchain infrastructure</li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="footer">
+            <p>Meta-4 | Decentralized Digital Ballot Platform</p>
+            <p>Hackathon Presentation</p>
+        </div>
+    </div>
 </body>
 </html>
